@@ -10,6 +10,7 @@ node {
       sh 'touch test3'  //
     }
     stage('Deploy') {
-      sh 'ls -a'  //
+      sh 'ls -a'
+      sh 'cat test.yml' //
     }
 }
