@@ -1,0 +1,2 @@
+[master]
+srv-prir-wf02 ansible_user=devopsuser ansible_become=true ansible_become_user=root ansible_become_method=sudo

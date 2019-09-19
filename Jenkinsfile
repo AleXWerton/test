@@ -1,4 +1,4 @@
-node {
+node('master') {
     stage('Build') {
       sh 'touch test1'  //
     }
@@ -6,6 +6,9 @@ node {
       sh 'touch test2'  //
     }
     stage('Deploy') {
-      sh 'touch test3'  // 
+      sh 'touch test3'  //
+    }
+    stage('Check') {
+      sh 'ls -a'
     }
 }
