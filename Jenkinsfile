@@ -1,6 +1,10 @@
-node(‘linux’){
-  git url: 'https://github.com/devopscube/simple-maven-pet-clinic-app.git'
-  def mvnHome = tool 'M2'
-  env.PATH = "${MNHOME}/bin:${env.PATH}"
-  sh 'mvn -B clean verify'
+pipeline {
+    agent { docker { image 'maven:3.3.3' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
 }
