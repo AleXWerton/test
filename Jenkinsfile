@@ -1,4 +1,5 @@
 node {
+    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '1dd9855d-79bd-45a0-8141-f3d8933d6c67', url: 'https://github.com/AleXWerton/test']]])
     stage('Build') {
       sh 'touch test1'  //
     }
