@@ -1,10 +1,11 @@
-pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'touch test1'
-            }
-        }
+node {
+    stage('Build') {
+      sh 'touch test1'  //
+    }
+    stage('Test') {
+      sh 'touch test2'  //
+    }
+    stage('Deploy') {
+      sh 'touch test3'  // 
     }
 }
