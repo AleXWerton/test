@@ -2,7 +2,7 @@ pipeline {
     agent { docker { image 'maven:3.3.3' } }
     stages {
         stage('build') {
-          'sh touch test1'
+          sh 'touch test1'
         }
     }
 }
