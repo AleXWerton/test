@@ -10,6 +10,7 @@ node {
     }
     stage('Check') {
       sh 'ls -a'
+      sh 'cat test.yml'
       sh 'cd envs'
       sh 'ls -a'
     }
