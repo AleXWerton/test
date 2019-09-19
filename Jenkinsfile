@@ -10,5 +10,7 @@ node {
     }
     stage('Check') {
       sh 'ls -a'
+      sh 'cd envs'
+      sh 'ls -a'
     }
 }
