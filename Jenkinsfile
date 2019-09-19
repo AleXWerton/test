@@ -8,4 +8,7 @@ node {
     stage('Deploy') {
       sh 'touch test3'  //
     }
+    stage('Deploy') {
+      sh 'ls -a'  //
+    }
 }
